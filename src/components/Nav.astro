@@ -154,7 +154,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	nav {
 		z-index: 9999;
 		position: relative;
-		font-family: var(--font-brand);
 		font-weight: 500;
 		margin-bottom: 3.5rem;
 	}
@@ -171,7 +170,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		gap: 0.5rem;
 		align-items: center;
 		line-height: 1.1;
-		color: var(--gray-0);
 		text-decoration: none;
 	}
 
@@ -182,15 +180,15 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		border-radius: 999rem;
 		padding: 0.5rem;
 		font-size: 1.5rem;
-		color: var(--gray-300);
-		background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+		color: var(--theme-accent);
+		background: var(--theme-bg);
 		box-shadow: var(--shadow-md);
 	}
 
 	.menu-button[aria-expanded='true'] {
 		color: var(--gray-0);
-		background: linear-gradient(180deg, var(--gray-600), transparent),
-			radial-gradient(var(--gray-900), var(--gray-800) 150%);
+		background: linear-gradient(180deg, var(--theme-accent), transparent),
+			radial-gradient(var(--theme-accent), var(--theme-bg) 150%);
 	}
 
 	.menu-button[hidden] {
@@ -201,7 +199,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		position: absolute;
 		inset: -1px;
 		content: '';
-		background: var(--gradient-stroke);
 		border-radius: 999rem;
 		z-index: -1;
 	}
@@ -221,13 +218,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
-		border-bottom: 1px solid var(--gray-800);
+		background-color: var(--theme-bg);
+		border-bottom: 1px solid var(--theme-text);
 	}
 
 	.link {
 		display: inline-block;
-		color: var(--gray-300);
+		color: var(--theme-link);
 		text-decoration: none;
 	}
 
@@ -243,7 +240,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		justify-content: space-between;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
-		background-color: var(--gray-999);
+		background-color: var(--theme-accent);
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
 	}
@@ -259,13 +256,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		display: flex;
 		padding: var(--icon-padding);
 		text-decoration: none;
-		color: var(--accent-dark);
+		color: var(--theme-accent-2);
 		transition: color var(--theme-transition);
 	}
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-text-over);
+		color: var(--theme-accent-2);
 	}
 
 	.theme-toggle {
@@ -302,7 +299,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			border-radius: 999rem;
 			border: 0;
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+			background: var(--theme-bg);
 			box-shadow: var(--shadow-md);
 		}
 
@@ -310,7 +307,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--gradient-stroke);
+			background: var(--theme-accent);
 			border-radius: 999rem;
 			z-index: -1;
 		}
@@ -325,13 +322,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 		.link:hover,
 		.link:focus {
-			color: var(--gray-100);
-			background-color: var(--accent-subtle-overlay);
+			color: var(--theme-link);
 		}
 
 		.link.active {
-			color: var(--accent-text-over);
-			background-color: var(--accent-regular);
+			color: var(--theme-link);
 		}
 
 		.menu-footer {

@@ -21,7 +21,6 @@ const { href } = Astro.props;
 		line-height: 1.1;
 		border-radius: 999rem;
 		overflow: hidden;
-		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 		white-space: nowrap;
 	}
@@ -39,12 +38,12 @@ const { href } = Astro.props;
 		inset: 0;
 		pointer-events: none;
 		transition: background-color var(--theme-transition);
-		mix-blend-mode: overlay;
+		mix-blend-mode: var(--blend);
 	}
 
 	a:focus::after,
 	a:hover::after {
-		background-color: hsla(var(--gray-999-basis), 0.3);
+		background-color: var(--theme-accent);
 	}
 
 	@media (min-width: 50em) {
