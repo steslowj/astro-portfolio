@@ -4,7 +4,7 @@
 :root {
   	/* Colors */
   --theme-bg: hsl(0, 0%, 98%);
-  --theme-link: hsl(172, 18%, 41%);
+  --theme-link: #567b76;
   --theme-text: hsl(203, 11%, 15%);
   --theme-accent: hsl(351, 66%, 48%);
   --theme-accent-2: hsl(0, 0%, 7%);
