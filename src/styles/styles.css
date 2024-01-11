@@ -34,8 +34,8 @@
 }
 
 :root.theme-dark {
-  --theme-bg: #30373b;
-  --theme-bg2: #1c1f21;
+  --theme-bg: #1c1f21;
+  --theme-bg2: #30373b;
   --theme-bg3: #3c464d;
   --theme-text: #91a4a1;
   --theme-accent1: #32926d;
@@ -70,16 +70,14 @@ body {
 	color: var(--theme-text);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.4;
-  font-weight: 500;
+	line-height: 1.5;
+  font-weight: 400;
   
 }
 
 section {
   min-height: 100vh;
   padding: 1rem;
-  margin: 0.2rem;
-  border: seagreen 1px solid;
 }
 
 .dotgrid {
@@ -187,7 +185,6 @@ h5 {
   justify-content: center;
   flex-flow: column;
   text-align: center;
-  border: lightblue 2px solid;
   padding: 1rem;
 }
 
@@ -198,7 +195,7 @@ h5 {
 }
 
 #sidebar .user .name {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   margin: 0.5rem 0;
 }
 
@@ -213,10 +210,6 @@ h5 {
   border-radius: 50%;
   object-fit: cover;
   margin-top: 0.5rem;
-}
-
-#sidebar .user img path{
-  fill: pink;
 }
 
 #sidebar .navbar {
@@ -254,7 +247,7 @@ h5 {
 
 #page {
   border: pink 1px solid;
-  margin-left: calc(5vw + 25rem);
+  margin-left: calc(5vw + 30rem);
   width: 60rem;
 }
 
@@ -266,9 +259,8 @@ h5 {
 }
 
 .heading {
-  margin: 0 6rem;
   font-size: var(--text-2xl);
-  padding: 1rem;
+  padding: 1rem 0;
   border-bottom: 2px solid var(--theme-text);
 }
 
@@ -391,103 +383,33 @@ h5 {
   font-size: var(--text-2xl);
 }
 
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------------------------------
-# Facts
---------------------------------------------------------------*/
-.facts {
-  padding-bottom: 30px;
-}
-
-.facts .count-box {
-  padding: 30px;
-  width: 100%;
-}
-
-.facts .count-box i {
-  display: block;
-  font-size: 44px;
-  color: #149ddd;
-  float: left;
-  line-height: 0;
-}
-
-.facts .count-box span {
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  color: #050d18;
-  margin-left: 60px;
-}
-
-.facts .count-box p {
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #122f57;
-}
-
-.facts .count-box a {
-  font-weight: 600;
-  display: block;
-  margin-top: 20px;
-  color: #122f57;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: ease-in-out 0.3s;
-}
-
-.facts .count-box a:hover {
-  color: #1f5297;
-}
-
-
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
 .resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: var(--text-xl);
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 10px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid var(--theme-accent1);
   position: relative;
 }
 
 .resume .resume-item h4 {
   line-height: 18px;
-  font-size: 18px;
+  font-size: var(--text-lg);
   font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: var(--theme-bg2);
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .resume .resume-item ul {
@@ -496,6 +418,10 @@ h5 {
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+}
+
+.resume .resume-item p:first-of-type {
+  padding-bottom: 5px;
 }
 
 .resume .resume-item:last-child {
@@ -510,8 +436,8 @@ h5 {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
+  background: var(--theme-bg);
+  border: 2px solid var(--theme-accent1);
 }
 
 
@@ -566,12 +492,16 @@ h5 {
 
   /*shrink sidebar and child items*/
   #sidebar {
-    margin-left: 5vw;
+    margin-left: 2vw;
     width: 18rem;
   }
 
+  #sidebar .user, #sidebar .navbar {
+    width: 15rem;
+  }
+
   #page {
-    margin-left: calc(5vw + 18rem);
+    margin-left: calc(2vw + 20rem);
     background-color: #d2a8e0;
     width: 70%;
   }
