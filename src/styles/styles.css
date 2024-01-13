@@ -8,7 +8,7 @@
   --theme-bg3: #dedede;
   --theme-text: #22272a;
   --theme-accent1: #cb2a42;
-  --theme-accent2: #a84353;
+  --theme-accent2: #a94f5e;
   --theme-contrast: #121212;
   --theme-selection: #f7cb2b;
 
@@ -41,7 +41,7 @@
   --theme-accent1: #32926d;
   --theme-accent2: #567b76;
   --theme-contrast: #445c52;  
-  --theme-selection: #a15221;
+  --theme-selection: #a11735;
 
 	--link-color: var(--theme-accent2);
 
@@ -102,7 +102,17 @@ section {
 }
 
 .btn:hover {
-  background: var(--theme-selection);
+  outline: var(--theme-contrast) 2px solid;
+  outline-offset: -8px;
+  /*
+  background: repeating-linear-gradient(
+    45deg,
+    var(--theme-bg),
+    var(--theme-bg) 10px,
+    var(--theme-bg2) 10px,
+    var(--theme-bg2) 20px
+  );
+  */
 }
 
 .btn:active {
@@ -191,7 +201,6 @@ h5 {
 #sidebar .user {
   padding: 1rem 1rem;
   width: 16rem;
-
 }
 
 #sidebar .user .name {
@@ -210,6 +219,7 @@ h5 {
   border-radius: 50%;
   object-fit: cover;
   margin-top: 0.5rem;
+  background-image: radial-gradient(#fafafadd, #fafafa00);
 }
 
 #sidebar .navbar {
@@ -246,9 +256,8 @@ h5 {
 }
 
 #page {
-  border: pink 1px solid;
-  margin-left: calc(5vw + 30rem);
-  width: 60rem;
+  margin-left: calc(5vw + 28rem);
+  width: 75rem;
 }
 
 .boxcard {
@@ -261,6 +270,7 @@ h5 {
 .heading {
   font-size: var(--text-2xl);
   padding: 1rem 0;
+  margin-bottom: 1rem;
   border-bottom: 2px solid var(--theme-text);
 }
 
@@ -279,7 +289,6 @@ h5 {
   font-size: var(--text-2xl);
 }
 
-
 .about h3 {
   font-size: var(--text-md);
   padding: 0.8rem 0;
@@ -291,62 +300,48 @@ h5 {
 
 .about .about-container {
   display: grid;
-  grid-template-columns: 35% 65%;
-  border: red 1px solid;
+  grid-template-columns: 320px auto;
+  max-width: 1000px;
+  margin: 1rem auto;
+  border: 1px red solid;
 }
 
 .about .about-container .about-img {
   display: grid;
   align-content: center;
-  grid-row: 1 / 3;
-  grid-column: 1 / 1;
 }
 
 .about .about-container .about-img .img {
-  scale: 0.9;
   border-radius: 3rem;
   border: 6px solid var(--theme-text);
   border-style: double;
 }
 
 .about .about-container .about-summary {
-  border: darkorange 1px solid;
-  grid-row: 1 / 2;
-  grid-column: 2 / 2;
-
+  border: purple 1px solid;
+  margin-left: 1rem;
 }
 
 .about .about-post {
-  grid-row: 2 / 3;
-  grid-column: 2 / 2;
+  display: block;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .about .about-lists {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem 0;
+  display: block;
 }
 
 .about ul {
   list-style: none;
-  padding: 0;
-  border: blueviolet 1px solid;
-  width:50%;
-}
-
-.about ul:last-child {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 0 0.2rem;
+  border: red 1px solid;
+  float: left;
 }
 
 .about ul li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  border: 1px blue solid;
+  border: black 1px solid;
+  margin: 2px 0;
 }
 
 .about ul strong {
@@ -375,8 +370,18 @@ h5 {
   width: 20rem;
   background: var(--theme-bg2);
   text-align: center;
-  padding: 2rem;
+  padding: 1.6rem;
   margin: 1.6rem;
+  outline: var(--theme-text) 0.5rem double;
+  outline-offset: -0.5rem;
+  border-radius: 3rem;
+}
+
+.about .about-row .counter .box .img {
+  width: 6rem;
+  background-color: var(--theme-accent2);
+  border-radius: 50%;
+  display: inline-flex;
 }
 
 .about .about-row .counter .box span {
@@ -385,12 +390,13 @@ h5 {
 
 .resume .resume-title {
   font-size: var(--text-xl);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 3rem;
+  margin-bottom: 1.8rem;
+  border-bottom: var(--theme-text) dotted 1px;
 }
 
 .resume .resume-item {
-  padding: 0 0 10px 20px;
+  padding: 0 0 1rem 20px;
   margin-top: -2px;
   border-left: 2px solid var(--theme-accent1);
   position: relative;
@@ -404,7 +410,7 @@ h5 {
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
+  font-size: var(--text-base);
   background: var(--theme-bg2);
   padding: 5px 15px;
   display: inline-block;
@@ -421,7 +427,8 @@ h5 {
 }
 
 .resume .resume-item p:first-of-type {
-  padding-bottom: 5px;
+  margin: 0.3rem 0.3rem;
+  color: var(--theme-accent2);
 }
 
 .resume .resume-item:last-child {
@@ -439,12 +446,6 @@ h5 {
   background: var(--theme-bg);
   border: 2px solid var(--theme-accent1);
 }
-
-
-
-
-
-
 
 .portfolio .box-container {
   display: flex;
@@ -475,6 +476,7 @@ h5 {
 
 }
 
+/*styles button to scroll to top of page*/
 .top {
   margin: 3rem 0;
   text-align: center;
@@ -504,51 +506,6 @@ h5 {
     margin-left: calc(2vw + 20rem);
     background-color: #d2a8e0;
     width: 70%;
-  }
-
-  .about .about-container {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    border: red 1px solid;
-  }
-  
-  .about .about-container .about-img {
-    grid-row: 1 / 2;
-  }
-
-  .about .about-container .about-img .img {
-    scale: 0.9;
-    border-radius: 3rem;
-    border: 6px solid var(--theme-text);
-    border-style: double;
-  }
-  
-  .about .about-container .about-summary {
-    border: darkorange 1px solid;
-    grid-row: 1 / 2;
-  }
-
-  .about .about-post {
-    grid-row: 3 / 3;
-    grid-column: 1 / 3;
-  }
-  
-  .about ul, .about ul:last-child {
-    width:80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-    
-  .about ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: var(--theme-text);
-    line-height: 0;
-  }
-
-  .about ul strong {
-    margin-right: 8px;
   }
   
 }
@@ -654,24 +611,9 @@ h5 {
     margin: 0.2rem 0;
   }
 
-  .about .row .info {
-    padding-left: 3rem; 
-  }
 
-  .about .row .counter .box {
-    width: 100%;
-  }
-
-  .about .about-container {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-  }
-
-  .about .about-container .about-img,
-  .about .about-container .about-summary, 
-  .about .about-container .about-post {
-    grid-row: initial;
-    grid-column: initial;
+  .resume .resume-item h4 {
+    line-height: normal;
   }
 
   .portfolio .box-container .box {
