@@ -39,12 +39,10 @@ import ThemeToggle from '../components/ThemeToggle.astro';
     }
   </script>
 
-
 </head>
 <body>
 
-  <!-- navbar section starts -->
-
+<!-- ======= Sidebar/Navbar Section ======= -->
   <div id="sidebar">
     <div class="user boxcard">
       <h3 class="name">Jessica <span class="accent">Steslow</span></h3>
@@ -55,9 +53,9 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
     <nav class="navbar boxcard">
       <ul>
-        <li><a href="#">about</a></li>
-        <li><a href="#">resume</a></li>
-        <li><a href="#">portfolio</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#resume">resume</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
       </ul>
       <div class="theme-toggle">
 				<ThemeToggle />
@@ -66,17 +64,14 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
   </div>
 
-  <!-- sidebar section ends -->
-
+  <!-- ======= Home Section ======= -->
   <div id="page">
 
-  <!-- home section starts -->
-  
   <section class="home" id="home">
 
     <h3>Hi there !</h3>
     <h1>I'm <span class="accent">Jessica Steslow</span></h1>
-    <p>I'm a water-focused engineer with a love of digital cartography --> GIS (Geographic Information Systems). This is my personal website and portfolio. Feel free to take a look around! </p>
+    <p>I'm a water-focused engineer with a love of digital cartography --> GIS (Geographic Information Systems). This is my personal website and portfolio. Please take a look around! </p>
     <p>Find me on:  
       <i class="fas fa-user"></i>
       <i class="fas fa-user"></i>
@@ -85,10 +80,7 @@ import ThemeToggle from '../components/ThemeToggle.astro';
     <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
   </section>
   
-  <!-- home section ends -->
-
-  <!-- about section starts -->
-
+  <!-- ======= About Section ======= -->
   <section id="about" class="about">
 
     <h2 class="heading"><span class="accent">about </span>me</h2>
@@ -126,45 +118,46 @@ import ThemeToggle from '../components/ThemeToggle.astro';
       <div class="counter">
 
         <div class="box">
-          <h3>my dog Tank          <img src="../../assets/tank.png" class="img" alt=""></h3>
-
+          <img src="../../assets/tank.png" class="img" alt="">
+          <h3>my dog Tank !</h3>
         </div>
 
         <div class="box">
-          <span>400+</span>
-          <h3>projects completed</h3>
+          <img src="../../assets/computer.png" class="img" alt="">
+          <h3>web dev &amp; GIS coding</h3>
+        </div>
+        
+        <div class="box">
+          <img src="../../assets/bike.png" class="img" alt="">
+          <h3>cycling</h3>
+        </div>
+        
+        <div class="box">
+          <img src="../../assets/latte.png" class="img" alt="">
+          <h3>good food &amp; drink</h3>
         </div>
 
         <div class="box">
-          <span>100+</span>
-          <h3>happy clients</h3>
-        </div>
-
-        <div class="box">
-          <span>6</span>
-          <h3>awards won</h3>
+          <img src="../../assets/dragon.png" class="img" alt="">
+          <h3>games, board and tabletop</h3>
         </div>
       </div>
     </div>
   </section>
-  <!-- End About Section -->
-
 
   <!-- ======= Resume Section ======= -->
   <section id="resume" class="resume">
     <div class="container">
 
-      <div class="section-title">
-        <h2 class="heading">my <span class="accent">resume</span></h2>
-        <p>Here I have included a brief resume. See my page on LinkedIn or email me for more information.</p>
-      </div>
+      <h2 class="heading">my <span class="accent">resume</span></h2>
+      <p>Here I have included a brief resume. See my page on <a href="https://www.linkedin.com/in/jessicasteslow/" target="_blank">LinkedIn</a> for more information!</p>
 
       <div class="row">
         <div class="col">
           <h3 class="resume-title">Summary</h3>
           <div class="resume-item">
             <h4>Jessica Steslow</h4>
-            <p><em>Data-driven water resources engineer with 6 years of engineering experience and an enthusiasm for GIS, with professional GIS experience and a MS in developing GIS web applications.</em></p>
+            <p><em>Data-driven water resources engineer with 6+ years of civil engineering experience and an enthusiasm for GIS.</em></p>
             <ul>
               <li>Tuczon, AZ, USA</li>
               <li>steslowj@gmail.com</li>
@@ -174,23 +167,23 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           <h3 class="resume-title">Education</h3>
           <div class="resume-item">
             <h4>MS: Online GIS Development</h4>
-            <h5>2022 - 2024</h5>
-            <p><em>University of Wisconsin; Madison, Wisconsin, USA</em></p>
-            <p>I am currently enrolled in the UW-Mad online program "Geographic Information Systems & Cartography - Online GIS Development." This program has classes on cartography, coding, databases, web design, and custom GIS applications. The unique part of this program is the focus on bringing GIS to the web - and learning web coding to do it. I have learned HTML, CSS, JS, and specific web libraries for GIS such as Leaflet, D3, and ESRI's JavaScript API.</p>
+            <h5><span class="date">June 2022 - May 2024</span><em class="gpa">GPA: 4.00</em></h5>
+            <p><em>University of Wisconsin; Madison, WI, USA</em></p>
+            <p>I am currently enrolled in the UW-Mad online program "Geographic Information Systems & Cartography - Online GIS Development." This program has classes on cartography, coding, databases, web design, and custom GIS applications. </p>
           </div>
           <div class="resume-item">
             <h4>BS: Civil &amp; Environmental Engineering</h4>
-            <h5>2013 - 2015 </h5>
-            <p><em>University of Illinois; Urbana-Champaign, Illinois, USA</em></p>
-            <p>Classes included core civil engineering concepts with a focus in environmental engineering: water resources, water and wastewater treatment, global resources economics, and life-cycle analysis. This four year BS degree was completed with a two year engineering program from the College of DuPage, Illinois. </p>
+            <h5><span class="date">Aug 2013 - Dec 2015</span><em class="gpa">GPA: 3.56</em></h5>
+            <p><em>University of Illinois; Urbana-Champaign, IL, USA</em></p>
+            <p>Classes included core civil engineering with a focus in environmental engineering: water resources, water and wastewater treatment, global resources economics, and life-cycle analysis. Completed with an AS from the College of DuPage, Illinois. </p>
           </div>
         </div>
         <div>
           <h3 class="resume-title">Professional Experience</h3>
           <div class="resume-item">
             <h4>Water Resources Engineer</h4>
-            <h5>May 2019 - Oct 2023</h5>
-            <p><em>WestLand Engineering &amp; Environmental Services, Tucson, Arizona, USA</em></p>
+            <h5><span class="date">May 2019 - Oct 2023</span></h5>
+            <p><em>WestLand Engineering &amp; Environmental Services, Tucson, AZ, USA</em></p>
             <ul>
               <li>Project Engineer on water-wastewater distribution, master planning, and hydraulic modeling projects</li>
               <li>Performed engineering calculations for pipe flow, head losses, water demand, and cost estimates </li>
@@ -200,8 +193,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           </div>
           <div class="resume-item">
             <h4>Civil Engineer</h4>
-            <h5>Aug 2016 - Apr 2019</h5>
-            <p><em>U.S. Army Corps of Engineers, Rock Island, Illinois, USA</em></p>
+            <h5><span class="date">Aug 2016 - Apr 2019</span></h5>
+            <p><em>U.S. Army Corps of Engineers, Rock Island, IL, USA</em></p>
             <ul>
               <li>Project Engineer in the Civil and Environmental Engineering Department</li>
               <li>Assisted in habitat restoration, civil construction, and flood control projects</li>
@@ -212,14 +205,66 @@ import ThemeToggle from '../components/ThemeToggle.astro';
         </div>
       </div>
 
+      <div class="resume-row">
+        <h3 class="resume-title">Technical Skills</h3>
+        <div class="counter">
+  
+          <div class="resume-box boxcard">
+            <h4>GIS Software</h4>
+            <ul>
+              <li>ESRI ArcGIS Pro, Online</li>
+              <li>ESRI ArcMap</li>
+              <li>GDAL &amp; OGR</li>
+            </ul>
+          </div>
+          <div class="resume-box boxcard">
+            <h4>Web-Based Mapping</h4>
+            <ul>
+              <li>Mapsbox Studio</li>
+              <li>Leaflet JS Library</li>
+              <li>D3 JS Library</li>
+            </ul>
+          </div>
+          <div class="resume-box boxcard">
+            <h4>Programming Languages</h4>
+            <ul>
+              <li>HTML, CSS, JS</li>
+              <li>Leaflet JS Library</li>
+              <li>D3 JS Library</li>
+            </ul>
+          </div>
+          <div class="resume-box boxcard">
+            <h4>Hydraulic &amp; Hydrologic Modeling</h4>
+            <ul>
+              <li>Innovyse Infowater</li>
+              <li>Innovyse Infosewer</li>
+              <li>HEC-RAS, HEC-HMS</li>
+            </ul>
+          </div>
+          <div class="resume-box boxcard">
+            <h4>Graphic Design</h4>
+            <ul>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="resume-box boxcard">
+            <h4>Web Development</h4>
+            <ul>
+              <li>Bootstrap, W3-CSS</li>
+              <li>Astro</li>
+              <li>Google API</li>
+            </ul>
+          </div>
+  
+        </div>
+      </div>
+
     </div>
   </section>
-    
-  <!-- End Resume Section -->
 
-
-  <!-- portfolio section starts -->
-
+  <!-- ======= Portfolio Section ======= -->
   <section class="portfolio" id="portfolio">
 
     <h2 class="heading"> my <span class="accent">portfolio</span></h2>
@@ -254,12 +299,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
   </section>
 
-  
-  <!-- portfolio section ends -->
 
-
-  <!-- scroll top button -->
-
+  <!-- ======= Scroll To Top Section ======= -->
   <a href="#home" class="top"><button class="btn"><i class="fas fa-coffee"></i>scroll top</button></a>
 
   </div> <!-- end of page div -->
