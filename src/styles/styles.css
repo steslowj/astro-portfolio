@@ -100,9 +100,12 @@ section {
 }
 
 .btn:hover {
-  outline: var(--theme-contrast) 2px solid;
-  outline-offset: -8px;
   /*
+  outline: var(--theme-bg) 8px solid;
+  outline-offset: -10px;
+  background-color: var(--theme-bg3);
+  */
+  
   background: repeating-linear-gradient(
     45deg,
     var(--theme-bg),
@@ -110,7 +113,7 @@ section {
     var(--theme-bg2) 10px,
     var(--theme-bg2) 20px
   );
-  */
+  
 }
 
 .btn:active {
@@ -231,19 +234,17 @@ h5 {
 
 #sidebar .navbar ul li a {
   display: block;
-  padding: 0.4rem;
+  padding: 0.6rem;
   margin: 0.8rem auto;
   background: var(--theme-bg);
-  font-size: var(--text-md);
-  border-radius: 5rem;
-  border: 6px solid var(--theme-bg);
+  font-size: var(--text-base);
+  border-radius: 4rem;
   width: 80%;
   color: var(--theme-text);
 }
 
 #sidebar .navbar ul li a:hover {
-  border: 6px solid var(--theme-text);
-  border-style: double;
+  outline: 2px var(--theme-text) solid;
 }
 
 #sidebar .navbar .theme-toggle {
@@ -310,8 +311,7 @@ h5 {
 
 .about .about-container .about-img .img {
   border-radius: 3rem;
-  border: 6px solid var(--theme-text);
-  border-style: double;
+  border: 2px solid var(--theme-text);
   scale: 0.9;
 }
 
@@ -366,31 +366,30 @@ h5 {
   display: flex;
   align-items: center;
   width: 20rem;
-  background: var(--theme-bg2);
-  padding: 1.5rem 1.5rem -2rem -2rem;
   margin: 1.6rem;
+  
 }
 
 .about .about-row .counter .box .img {
-  width: 6rem;
-  margin-right: 1rem;
+  width: 5.5rem;
   background-color: var(--theme-bg);
-  background-image: linear-gradient(160deg, #91d3b4c7, #cb2a4244);
-  border-radius: 20%;
-  outline: var(--theme-text) 0.4rem double;
+  background-image: linear-gradient(160deg, #91d3b4c7, #da8893a6);
+  border-radius: 20px;
+  border: 2px solid #22272a;
+  z-index: 20;
+
+  
 }
 
 .about .about-row .counter .box h3 {
   font-size: var(--text-base);
+  background-color: var(--theme-bg2);
+  padding: 1rem 1rem 1rem 2rem;
+  margin-left: 0.5rem;
+  position: relative;
+  left: -1rem;
+  width: 100%;
 }
-
-.resume .resume-title {
-  font-size: var(--text-lg);
-  margin-top: 1.5rem;
-  margin-bottom: 1.8rem;
-}
-
-
 
 .resume .row {
   display: grid;
@@ -402,6 +401,13 @@ h5 {
   margin-top: -2px;
   border-left: 2px solid var(--theme-accent1);
   position: relative;
+}
+
+.resume .resume-title {
+  font-size: var(--text-lg);
+  margin: 2rem 0;
+  width:95%;
+  border-bottom: 1px solid var(--theme-bg3);
 }
 
 .resume .resume-item h4 {
@@ -434,17 +440,16 @@ h5 {
 }
 
 .resume .resume-item ul li {
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
 
 .resume .resume-item p:first-of-type {
-  margin: 0.3rem 0.3rem;
+  margin: 0.5rem 0.3rem;
   color: var(--theme-accent2);
 }
 
-.resume .resume-item .gpa {
-  float: right;
-  margin-right: 1rem;
+.resume .resume-item p {
+  margin: 0.5rem 0.3rem;
 }
 
 .resume .resume-item:last-child {
@@ -476,13 +481,22 @@ h5 {
   align-items: center;
   width: 20rem;
   background: var(--theme-bg2);
-  padding: 0.5rem 0rem;
+  padding-bottom: 0.5rem;
   margin: 1.6rem;
 }
 
 .resume .resume-row .counter .resume-box h4 {
   font-size: var(--text-base);
   border-bottom: 1px solid var(--theme-accent1);
+  width: 100%;
+  text-align: center;
+  background-color: var(--theme-bg);
+  padding: 0.5rem 0;
+  justify-self: center;
+}
+
+.resume .resume-row .counter .resume-box ul li {
+  margin: 0.2rem;
 }
 
 .portfolio .box-container {
@@ -493,10 +507,15 @@ h5 {
   padding: 2rem 0;
 }
 
+.portfolio .box-container .portfolio-item p{
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .portfolio .box-container .box {
-  height: 20rem;
-  width: 26rem;
-  margin: 2rem;
+  height: 18rem;
+  width: 24rem;
+  margin: 0.5rem 2rem 2rem 2rem;
   overflow: hidden;
   cursor: pointer;
   padding: 0;
@@ -561,11 +580,12 @@ h5 {
     justify-content: space-between;
     flex-flow: row;
     margin: 0 0;
-    padding: 0 0;
+    padding: 0 0 5px 0;
+    border-bottom: solid 2px var(--theme-text);
   }
 
   #sidebar .user, #sidebar .navbar {
-    border: 1px red solid;
+    border: none;
     box-shadow: none;
     display: flex; 
     align-items: center;
@@ -577,7 +597,7 @@ h5 {
   #sidebar .user img { 
     height: 3rem;
     width: 3rem;
-    margin: 0 0.2rem;
+    margin: 0 0 0 1rem;
     padding: 0 0; 
   }
 
@@ -621,7 +641,7 @@ h5 {
   }
 
   .about .about-row .counter .box .img {
-    width: 4rem;
+    width: 5rem;
   }
 
 }
@@ -635,8 +655,9 @@ h5 {
     padding: 0;
   }
 
-  #sidebar .user .name { margin: 0 5vw;}
-  #sidebar .navbar ul { width: 50%; }
+  #sidebar .user .name { margin: 1rem 0;}
+  #sidebar .user img {display: none;}
+  #sidebar .navbar ul { width: 50%;}
 
   #sidebar .user, #sidebar .navbar {
     width: 100%;
@@ -650,14 +671,11 @@ h5 {
     justify-content: center;
   }
 
+  #sidebar .navbar ul li a { padding: 10px; margin: 2px; }
+
   #sidebar .navbar .theme-toggle {
     justify-content: center;
     margin: 0.2rem 0;
-  }
-
-
-  .resume .resume-item h4 {
-    line-height: normal;
   }
 
   .portfolio .box-container .box {
