@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="My Work | Jessica Steslow"
+	description="Learn about Jessica Steslow's most recent projects"
+>
+
+  <section class="portfolio" id="portfolio">
+
+    <h2 class="heading"> my <span class="accent">portfolio</span></h2>
+
+    <div class="box-container">
+
+      <div class="portfolio-item">
+        <p>Portfolio Item 1</p>
+        <div class="box boxcard">
+          <img src="../../assets/stock-1.jpg" />
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <p>Portfolio Item 2</p>
+        <div class="box boxcard">
+          <img src="../../assets/stock-1.jpg" />
+        </div>
+      </div>
+      
+      <div class="portfolio-item">
+        <p>Portfolio Item 3</p>
+        <div class="box boxcard">
+          <img src="../../assets/stock-1.jpg" />
+        </div>
+      </div>
+      
+      <div class="portfolio-item">
+        <p>Portfolio Item 4</p>
+        <div class="box boxcard">
+          <img src="../../assets/stock-1.jpg" />
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</BaseLayout>
