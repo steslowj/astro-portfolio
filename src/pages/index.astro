@@ -1,149 +1,21 @@
 ---
 import '../styles/styles.css';
+
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+
 import Icon from '../components/Icon.astro';
-import ThemeToggle from '../components/ThemeToggle.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
 ---
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jessica Steslow</title>
+<BaseLayout>
 
-  <!-- font awesome cdn link -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==' crossorigin='anonymous'/>
+  <Hero />
 
-  <!-- google fonts links -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <About />
 
-  <script is:inline>
-    // This code is inlined in the head to make dark mode instant & blocking.
-    const getThemePreference = () => {
-      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-        return localStorage.getItem('theme');
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    };
-    const isDark = getThemePreference() === 'dark';
-    document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
-  
-    if (typeof localStorage !== 'undefined') {
-      // Watch the document element and persist user preference when it changes.
-      const observer = new MutationObserver(() => {
-        const isDark = document.documentElement.classList.contains('theme-dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    }
-  </script>
-
-</head>
-<body>
-
-<!-- ======= Sidebar/Navbar Section ======= -->
-  <div id="sidebar">
-    <div class="user boxcard">
-      <h3 class="name">Jessica <span class="accent">Steslow</span></h3>
-      <p class="post">· maps and data ·</p>
-      <p class="post">· green engineering ·</p>
-      <img src="../../assets/lightbulb.svg" alt="a lightbulb with vines inside the glass"/>
-    </div>
-
-    <nav class="navbar boxcard">
-      <ul>
-        <li><a href="#about">about</a></li>
-        <li><a href="#resume">resume</a></li>
-        <li><a href="#portfolio">portfolio</a></li>
-      </ul>
-      <div class="theme-toggle">
-				<ThemeToggle />
-			</div>
-    </nav>
-
-  </div>
-
-  <!-- ======= Home Section ======= -->
-  <div id="page">
-
-  <section class="home" id="home">
-
-    <h3>Hi there !</h3>
-    <h1>I'm <span class="accent">Jessica Steslow</span></h1>
-    <p>I'm a water-focused engineer with a love of digital cartography --> GIS (Geographic Information Systems). This is my personal website and portfolio. Please take a look around! </p>
-    <p>Find me on:  
-      <i class="fas fa-user"></i>
-      <i class="fas fa-user"></i>
-      <i class="fas fa-user"></i>
-    </p>
-    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
-  </section>
-  
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <h2 class="heading"><span class="accent">about </span>me</h2>
-    <p>I have an intersectional professional background but I like to think it's brought together by a strong interest in math and wanting to work on sustainability. </p>
-
-    <div class="about-container">
-      <div class="about-img">
-        <img src="../../assets/steslow_center.jpg" class="img" alt="">
-      </div>
-      <div class="about-summary">
-        <h3>Civil Engineer &amp; GIS Analyst</h3>
-        <p>
-          I started as a civil engineer working on water resources and I found I loved worked on GIS. I am working on a master's degree in GIS to hone these skills.
-        </p>
-        <div class="about-lists">
-          <ul class="list-left">
-            <li><i class="fas fa-chevron-right"></i> <strong>Certified PE:</strong> <span>Civil, AZ #75715</span></li>
-            <li><i class="fas fa-chevron-right"></i> <strong>MS:</strong> <span>GIS Online Development</span></li>
-            <li><i class="fas fa-chevron-right"></i> <strong>BS:</strong> <span>Civil Engineering</span></li>
-          </ul>
-          <ul class="list-right">
-            <li><i class="fas fa-chevron-right"></i> <strong>City:</strong> <span>Tucson, AZ, USA</span></li>
-            <li><i class="fas fa-chevron-right"></i> <strong>Email:</strong> <span>steslowj@gmail.com</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="about-post">
-      <p>
-        Outside of work and school, I enjoy (indoor!) rock climbing, cycling, hiking, eating good food, and relaxing with friends for board games.
-      </p>
-    </div>
-    
-    <div class="about-row">
-      <div class="counter">
-
-        <div class="box">
-          <img src="../../assets/tank.png" class="img" alt="">
-          <h3>my dog Tank !</h3>
-        </div>
-
-        <div class="box">
-          <img src="../../assets/computer.png" class="img" alt="">
-          <h3>web dev &amp; GIS coding</h3>
-        </div>
-        
-        <div class="box">
-          <img src="../../assets/bike.png" class="img" alt="">
-          <h3>cycling</h3>
-        </div>
-        
-        <div class="box">
-          <img src="../../assets/latte.png" class="img" alt="">
-          <h3>good food &amp; drink</h3>
-        </div>
-
-        <div class="box">
-          <img src="../../assets/dragon.png" class="img" alt="">
-          <h3>games: video, board, &amp; TTRPG</h3>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ======= Resume Section ======= -->
   <section id="resume" class="resume">
@@ -280,21 +152,21 @@ import ThemeToggle from '../components/ThemeToggle.astro';
       <div class="portfolio-item">
         <p>Portfolio Item 2</p>
         <div class="box boxcard">
-          <img src="../../assets/stock-2.jpg" />
+          <img src="../../assets/stock-1.jpg" />
         </div>
       </div>
       
       <div class="portfolio-item">
         <p>Portfolio Item 3</p>
         <div class="box boxcard">
-          <img src="../../assets/stock-3.jpg" />
+          <img src="../../assets/stock-1.jpg" />
         </div>
       </div>
       
       <div class="portfolio-item">
         <p>Portfolio Item 4</p>
         <div class="box boxcard">
-          <img src="../../assets/stock-4.jpg" />
+          <img src="../../assets/stock-1.jpg" />
         </div>
       </div>
 
@@ -308,12 +180,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
   </div> <!-- end of page div -->
 
-  <!-- jquery cdn link -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
 
-  <!-- custom js file link -->
-  <script src="../js/main.js" ></script>
 
   
-</body>
-</html>
+
+</BaseLayout>

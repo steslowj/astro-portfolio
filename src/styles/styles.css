@@ -229,7 +229,7 @@ h5 {
 
 #sidebar .navbar ul {
   list-style: none;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 
 #sidebar .navbar ul li a {
@@ -251,10 +251,10 @@ h5 {
   display: flex;
   align-items: center;
   flex-flow: column;
-  margin: 0.2rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
-#page {
+#page, .baselayout-content {
   margin-left: calc(5vw + 28rem);
   width: 75rem;
 }
@@ -273,18 +273,19 @@ h5 {
   border-bottom: 2px solid var(--theme-text);
 }
 
-.home {
+.hero {
   display: flex;
   justify-content: center;
   flex-flow: column;
-  padding: 0 10rem;
+  padding: 0 3rem;
+  background-color: red;
 }
 
-.home p {
+.hero p {
   padding: 1rem 0;
 }
 
-.home h1 {
+.hero h1 {
   font-size: var(--text-2xl);
 }
 
@@ -366,8 +367,7 @@ h5 {
   display: flex;
   align-items: center;
   width: 20rem;
-  margin: 1.6rem;
-  
+  margin: 1.6rem; 
 }
 
 .about .about-row .counter .box .img {
@@ -376,9 +376,7 @@ h5 {
   background-image: linear-gradient(160deg, #91d3b4c7, #da8893a6);
   border-radius: 20px;
   border: 2px solid #22272a;
-  z-index: 20;
-
-  
+  z-index: 20;  
 }
 
 .about .about-row .counter .box h3 {
@@ -406,7 +404,7 @@ h5 {
 .resume .resume-title {
   font-size: var(--text-lg);
   margin: 2rem 0;
-  width:95%;
+  width:98%;
   border-bottom: 1px solid var(--theme-bg3);
 }
 
@@ -530,7 +528,6 @@ h5 {
 
 .portfolio .box-container .box:hover img{
   transform: scale(1.2);
-
 }
 
 /*styles button to scroll to top of page*/
@@ -545,7 +542,7 @@ h5 {
 /* media queries */
 @media (max-width:1700px) {
 
-  .home {
+  .hero {
     padding: 1rem 6rem;
   }
 
@@ -559,7 +556,7 @@ h5 {
     width: 15rem;
   }
 
-  #page {
+  #page, .baselayout-content {
     margin-left: calc(2vw + 20rem);
     width: 70%;
   }
@@ -607,12 +604,18 @@ h5 {
     padding: 0; 
     margin: 0;
     display: flex;
+    align-items: center;
+  
+  }
+
+  #sidebar .navbar ul li {
+    margin: 0 4px;
+    width: 90px;
   }
 
   #sidebar .navbar ul li a {
-    padding: 4px 6px;
-    margin: 0 2px;
-    font-size: var(--text-base);
+    padding: 4px 2px;
+    font-size: calc(var(--text-base)*0.95);
     width: 100%;
   }
 
@@ -625,14 +628,14 @@ h5 {
     display: flex;
     align-items: center;
     flex-flow: row;
-    margin: 0.2rem 0;
+    padding: 10px 200px 0 0;
   }
-  #page {
+  #page, .baselayout-content {
     width: 100%;
     margin-left: 0;
   }
 
-  .home {
+  .hero {
     padding: 1rem 4rem;
   }
 
@@ -676,6 +679,7 @@ h5 {
   #sidebar .navbar .theme-toggle {
     justify-content: center;
     margin: 0.2rem 0;
+    padding: 0;
   }
 
   .portfolio .box-container .box {

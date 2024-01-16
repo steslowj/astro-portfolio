@@ -13,10 +13,11 @@ import Icon from './Icon.astro';
 <style>
 	button {
 		display: flex;
-		border: 0;
+		border: 1px solid var(--theme-contrast);
 		border-radius: 999rem;
 		padding: 0;
-		background-color: var(--theme-bg);
+    margin: 1rem;
+		background-color: var(--theme-bg3);
 		cursor: pointer;
 	}
 
@@ -36,7 +37,8 @@ import Icon from './Icon.astro';
 		z-index: -1;
 		position: absolute;
 		inset: 0;
-		background-color: var(--theme-accent);
+		background-color: var(--theme-bg);
+    color: var(--theme-accent1);
 		border-radius: 999rem;
 	}
 

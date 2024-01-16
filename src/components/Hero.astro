@@ -1,53 +1,19 @@
 ---
-interface Props {
-	title: string;
-	tagline?: string;
-	align?: 'start' | 'center';
-}
 
-const { align = 'center', tagline, title } = Astro.props;
 ---
 
-<div class:list={['hero stack gap-4', align]}>
-	<div class="stack gap-2">
-		<h1 class="title">{title}</h1>
-		{tagline && <p class="tagline">{tagline}</p>}
-	</div>
-	<slot />
-</div>
+<div id="page">
 
-<style>
-	.hero {
-		font-size: var(--text-lg);
-		text-align: center;
-	}
+  <section class="hero" id="hero">
 
-	.title,
-	.tagline {
-		max-width: 37ch;
-		margin-inline: auto;
-	}
-
-	.title {
-		font-size: var(--text-3xl);
-	}
-
-	@media (min-width: 50em) {
-		.hero {
-			font-size: var(--text-xl);
-		}
-
-		.start {
-			text-align: start;
-		}
-
-		.start .title,
-		.start .tagline {
-			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-4xl);
-		}
-	}
-</style>
+    <h3>Hi there !</h3>
+    <h1>I'm <span class="accent">Jessica Steslow</span></h1>
+    <p>I'm a water-focused engineer with a love of digital cartography --> GIS (Geographic Information Systems). This is my personal website and portfolio. Please take a look around! </p>
+    <p>Find me on:  
+      <i class="fas fa-user"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-user"></i>
+    </p>
+    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
+  </section>
+  
