@@ -3,10 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-import ContactCTA from '../../components/ContactCTA.astro';
-import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
-import Pill from '../../components/Pill.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -32,15 +29,12 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
-					<Hero title={entry.data.title} align="start">
+					<a class="back-link" href="/portfolio/"><Icon icon="arrow-left" /> portfolio</a>
+					<h2>{entry.data.title}
 						<div class="details">
-							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
-							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
-					</Hero>
+					</h2>
 				</div>
 			</header>
 			<main class="wrapper">
@@ -52,7 +46,6 @@ const { Content } = await entry.render();
 				</div>
 			</main>
 		</div>
-		<ContactCTA />
 	</div>
 </BaseLayout>
 

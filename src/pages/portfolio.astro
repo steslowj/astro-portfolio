@@ -21,6 +21,12 @@ const projects = (await getCollection('work')).sort(
 
     <div class="box-container">
 
+        {
+          projects.map((project) => (
+            <PortfolioPreview project={project} />
+          ))
+        }
+
       <div class="portfolio-item">
         <p>Portfolio Item 1</p>
         <div class="box boxcard">

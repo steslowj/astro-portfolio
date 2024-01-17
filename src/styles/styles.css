@@ -11,8 +11,7 @@
   --theme-accent2: #a94f5e;
   --theme-accent3: #32926d;
   --theme-contrast: #121212;
-  --theme-selection: #f7cb2b;
-
+  --theme-selection: #cdffb8;
 
 
 	/* Text Sizes */
@@ -35,13 +34,13 @@
 
 :root.theme-dark {
   --theme-bg: #1c1f21;
-  --theme-bg2: #30373b;
+  --theme-bg2: #292e31;
   --theme-bg3: #3c464d;
-  --theme-text: #91a4a1;
-  --theme-accent1: #32926d;
-  --theme-accent2: #567b76;
+  --theme-text: #9db2af;
+  --theme-accent1: #29bc89;
+  --theme-accent2: #53827c;
   --theme-accent3: #cb2a42;
-  --theme-contrast: #445c52;  
+  --theme-contrast: #565f5e;  
   --theme-selection: #a11735;
 }
 
@@ -147,8 +146,8 @@ img {
 	height: auto;
 }
 
-a { color: var(--theme-accent1); text-decoration: underline;}
-a:hover {  color: var(--theme-accent3); }
+a { color: var(--theme-text); text-decoration: underline;}
+a:hover {  color: var(--theme-accent1); }
 
 h1,
 h2,
@@ -293,6 +292,30 @@ h5 {
   font-size: var(--text-2xl);
 }
 
+.hero-icon-row {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.hero-icon {
+  padding: 0.5rem;
+  display: inline-flex;
+  flex-direction: row;
+  align-items:flex-end;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  font-size: var(--text-lg);
+  color: var(--theme-text);
+}
+
+.hero-icon:hover {
+  color: var(--theme-accent1);
+}
+
+.hero-icon:first-of-type {
+  margin-left: 0.7rem;
+}
 .about h3 {
   font-size: var(--text-md);
   padding: 0.8rem 0;

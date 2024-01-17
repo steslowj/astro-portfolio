@@ -6,13 +6,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
 import Icon from '../components/Icon.astro';
-import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 ---
 
 <BaseLayout>
 
-  <Hero />
+  <section class="hero" id="hero">
+
+    <h3>Hi there !</h3>
+    <h1>I'm <span class="accent">Jessica Steslow</span></h1>
+    <p>I'm a water-focused engineer with a love of digital cartography --> GIS (Geographic Information Systems). This is my personal website and portfolio. Please take a look around! </p>
+    <p class="hero-icon-row">Find me on:  
+      <span class="hero-icon">
+        <a href="https://www.linkedin.com/in/jessicasteslow/" target="_blank">
+          <Icon icon="linkedin-logo" /></a></span>
+      <span class="hero-icon">
+        <a href="https://github.com/steslowj" target="_blank">
+          <Icon icon="github-logo" /></a></span>
+      <span class="hero-icon">
+        <a href="mailto:steslowj@gmail.com" target="_blank">
+          <Icon icon="envelope" /></a></span>
+    </p>
+  </section>
+  
   <About />
 
 </BaseLayout>
