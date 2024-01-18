@@ -9,8 +9,8 @@ tags:
   - Infographic
   - Choropleth
   - UW-Mad
-  - Geog 370
-  - ArcGIS Pro
+  - Geog370
+  - ArcGIS-Pro
   - Illustrator
 ---
 

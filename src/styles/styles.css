@@ -36,9 +36,9 @@
   --theme-bg: #1c1f21;
   --theme-bg2: #292e31;
   --theme-bg3: #3c464d;
-  --theme-text: #9db2af;
+  --theme-text: #ddebe9;
   --theme-accent1: #29bc89;
-  --theme-accent2: #53827c;
+  --theme-accent2: #64b8ac;
   --theme-accent3: #cb2a42;
   --theme-contrast: #565f5e;  
   --theme-selection: #a11735;
@@ -82,49 +82,38 @@ section {
   background-image: radial-gradient(circle, var(--theme-text) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.btn {
-  padding: 0.7rem 2.5rem;
-  color: var(--theme-text);
-  background: var(--theme-bg);
-  border: var(--theme-text) 2px solid;
-  box-shadow: var(--theme-contrast) 4px 4px;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  font-size: var(--text-base);
-  font-family: var(--font-body);
-}
+.sr-only { display: none; }
 
-.btn i {
-  padding: 0 0.5rem;
+.show{ display: grid !important; }
+
+.btn {
+  background-color: var(--theme-bg);
+  color: var(--theme-accent1);
+  border: var(--theme-accent1) 1px solid;
+  text-transform: none;
+  border-radius: 0.6rem;
+  padding: 6px 12px;
+  margin: 4px 1px;
+  font-size: calc(var(--text-sm)*1.1);
 }
 
 .btn:hover {
-  /*
-  outline: var(--theme-bg) 8px solid;
-  outline-offset: -10px;
-  background-color: var(--theme-bg3);
-  */
-  
-  background: repeating-linear-gradient(
-    45deg,
-    var(--theme-bg),
-    var(--theme-bg) 10px,
-    var(--theme-bg2) 10px,
-    var(--theme-bg2) 20px
-  );
-  
+  color: var(--theme-text);
+  border: var(--theme-text) 1px solid;
+  text-decoration: underline;
+}
+
+.btn.active {
+  background-color: var(--theme-accent1);
+  color: var(--theme-bg);
+  text-decoration-color: none;
+  transition: var(--theme-transition);
 }
 
 .btn:active {
-  box-shadow: none;
-  transform: translate(4px, 4px);
-}
-
-.btn:press {
-  background: var(--theme-bg3);
-  transform:translateY(8px);
-  transform:translateX(6px);
-  box-shadow: none;
+  background-color: var(--theme-accent1);
+  color: var(--theme-bg);
+  border: var(--theme-accent1) 1px solid;
 }
 
 *,
@@ -366,7 +355,9 @@ h5 {
 
 .about ul li {
   margin: 4px 20px 0 0;
+  align-items: center;
 }
+
 
 .about ul strong {
   margin-right: 2px;
@@ -532,6 +523,9 @@ h5 {
   padding: 2rem 0;
 }
 
+.portfolio .box-container .portfolio-item {
+  display: none; /*default display, addtnl display handled by filter.js*/
+}
 .portfolio .box-container .portfolio-item p{
   text-align: center;
   margin-top: 2rem;

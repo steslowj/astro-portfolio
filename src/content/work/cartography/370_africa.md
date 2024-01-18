@@ -6,11 +6,10 @@ img_alt: A detailed map of Africa colored by terrain type with country boundarie
 description: |
   A physical map of Africa testing our ability to design labels in a tight squeeze.
 tags:
-  - Physical Map
-  - Africa
+  - Physical
   - UW-Mad
-  - Geog 370
-  - ArcGIS Pro
+  - Geog370
+  - ArcGIS-Pro
   - Illustrator
 ---
 

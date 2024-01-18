@@ -6,12 +6,10 @@ img_alt: A choropleth map of the United States with individual counties colored 
 description: |
   A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
 tags:
-  - United States
-  - Choropleth
   - UW-Mad
-  - Geog 370
-  - ArcGIS Pro
-  - Illustrator
+  - Geog572
+  - Mapbox
+  - Web
 ---
 
 This project is my Lab 3 for UW-Madison Geog 572 Graphic Design in Cartography Class.
