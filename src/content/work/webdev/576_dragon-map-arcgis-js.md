@@ -1,14 +1,15 @@
 ---
 title: The Dragon Map
 publishDate: 2023-10-31 00:00:00
-img: /assets/stock-1.jpg
-img_alt: A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+img: /assets/preview/576_dragon.png
+img_alt: A web app with a menu bar on the left and a large map on the right showing icons of dragons and lizards.
 description: |
-  A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+  Learning ESRI's ArcGIS JavaScript API with a dragon database.
 tags:
   - UW-Mad
   - Geog576
   - Web
+liveLink: https://steslowj.github.io/g576_midterm-dragonmap/
 ---
 
-This project is my Lab 2 for UW-Madison Geog 575 Interactive Cartography Class.
+This project is my midterm for UW-Madison Geog 576 Class.

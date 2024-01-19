@@ -73,7 +73,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 1rem;
 }
 
@@ -107,7 +107,7 @@ section {
   background-color: var(--theme-accent1);
   color: var(--theme-bg);
   text-decoration-color: none;
-  transition: var(--theme-transition);
+  transition: var(--theme-accent1) (--theme-transition);
 }
 
 .btn:active {
@@ -518,22 +518,24 @@ h5 {
 .portfolio .box-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 2rem 0;
+  padding: 0;
 }
 
 .portfolio .box-container .portfolio-item {
   display: none; /*default display, addtnl display handled by filter.js*/
+  justify-items:center;
 }
 .portfolio .box-container .portfolio-item p{
   text-align: center;
   margin-top: 2rem;
+  max-width: 26ch;
 }
 
 .portfolio .box-container .box {
-  height: 18rem;
-  width: 24rem;
+  width: 18rem;
   margin: 0.5rem 2rem 2rem 2rem;
   overflow: hidden;
   cursor: pointer;
@@ -542,14 +544,16 @@ h5 {
 
 .portfolio .box-container .box img {
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
 }
 
+/*
 .portfolio .box-container .box:hover img{
   transform: scale(1.2);
 }
+*/
 
 /*styles button to scroll to top of page*/
 .top {

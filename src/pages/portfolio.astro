@@ -7,8 +7,6 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
-
-
 ---
 
 <BaseLayout
@@ -24,6 +22,7 @@ const projects = (await getCollection('work')).sort(
       <div><p>Tags:</p></div>
       <div id="filterBtnContainer"> 
         <button type="button" class="btn active portfolio-tag-cloud" id="all">Show All</button>
+        <button type="button" class="btn active portfolio-tag-cloud" id="UW-Mad">UW-Mad</button>
         <button type="button" class="btn portfolio-tag-cloud" id="Reference">Reference Map</button>
         <button type="button" class="btn portfolio-tag-cloud" id="Physical">Physical Features Map</button>
         <button type="button" class="btn portfolio-tag-cloud" id="Infographic">Infographic</button>
@@ -40,34 +39,6 @@ const projects = (await getCollection('work')).sort(
           ))
         }
 
-      <div class="portfolio-item reference">
-        <p>Portfolio Item 1</p>
-        <div class="box boxcard">
-          <img src="../../assets/stock-1.jpg" />
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <p>Portfolio Item 2</p>
-        <div class="box boxcard">
-          <img src="../../assets/stock-1.jpg" />
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <p>Portfolio Item 3</p>
-        <div class="box boxcard">
-          <img src="../../assets/stock-1.jpg" />
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <p>Portfolio Item 4</p>
-        <div class="box boxcard">
-          <img src="../../assets/stock-1.jpg" />
-        </div>
-      </div>
-
     </div>
 
   </section>
@@ -80,7 +51,8 @@ const projects = (await getCollection('work')).sort(
       // Find all buttons with the `portfolio-tag-cloud` class on the page.
       const buttons = document.querySelectorAll('button.portfolio-tag-cloud');
 
-      // add function to handle clicks on each button.
+      // astro cannot read a custom function attached as button attribute onclick
+      // so a click handler must be added via js
       buttons.forEach((button) => {
         button.addEventListener('click', () => {
           console.log('Button was clicked!', button.id);
@@ -142,3 +114,16 @@ const projects = (await getCollection('work')).sort(
   </script>
 
 </BaseLayout>
+
+<style>
+  	.portfolio-tag-cloud {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.portfolio-tag-cloud:hover,
+	.portfolio-tag-cloud:focus {
+		text-decoration-color: currentColor;
+	}
+</style>

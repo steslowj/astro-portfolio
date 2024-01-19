@@ -1,12 +1,12 @@
 ---
-title: Great Dividing Range Cycling Race
+title: Houseplants and the Fertility Rate
 publishDate: 2023-03-20 00:00:00
-img: /assets/stock-1.jpg
-img_alt: A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+img: /assets/preview/572_houseplant_bivariate.png
+img_alt: A two-variable choropleth map of the United States with states colored by fertility rate and number of houseplants bought.
 description: |
-  A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+  A graphical exploration of how related numbers of houseplants is to fertility rate in the USA.
 tags:
-  - Choropleth
+  - Infographic
   - UW-Mad
   - Geog370
   - ArcGIS-Pro

@@ -1,13 +1,11 @@
 ---
 title: Sketchy from ESRI Styles
 publishDate: 2023-03-23 00:00:00
-img: /assets/stock-1.jpg
-img_alt: A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+img: /assets/preview/az-sketchy.png
+img_alt: An artistic map of Arizona where elevation contours are colored in a rainbow pattern with wobbly pencil lines.
 description: |
-  A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+  An exploration using "Sketchy" from ERSI Styles
 tags:
-  - UW-Mad
-  - Geog370
   - ArcGIS-Pro
   - ESRI-Styles
 ---

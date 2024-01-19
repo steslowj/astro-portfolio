@@ -1,14 +1,14 @@
 ---
 title: Madison Bike Repair Stations
 publishDate: 2023-12-14 00:00:00
-img: /assets/stock-1.jpg
-img_alt: A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+img: /assets/preview/576_cycle-repair.png
+img_alt: A web app that shows bicycle repair stations in Madison, Wisconsin on a Google Map with notes on interactions overlaid on the map.
 description: |
-  A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+  Learning back-end web development with Google Maps API
 tags:
   - UW-Mad
   - Geog576
   - Web
 ---
 
-This project is my Lab 2 for UW-Madison Geog 575 Interactive Cartography Class.
+This project is my final project for UW-Madison Geog 576 class.

@@ -1,7 +1,7 @@
 ---
 title: Arizona State Reference Map
 publishDate: 2022-06-12 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/preview/370_arizona.png
 img_alt: A simple political map of the U.S. State of Arizona with labels and lines for major roads, major rivers, major water bodies. The map is colored light blue and the background has a gradient of blue to white to purple, with a silhouette of cacti on the bottom edge.
 description: |
   A reference map of the U.S. State of Arizona with labels for major roads and waterways.

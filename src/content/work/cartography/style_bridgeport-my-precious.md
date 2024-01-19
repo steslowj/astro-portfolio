@@ -1,16 +1,13 @@
 ---
 title: My Precious from ESRI Styles
 publishDate: 2023-03-23 00:00:00
-img: /assets/stock-1.jpg
-img_alt: A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+img: /assets/preview/bridgeport.png
+img_alt: A map of Bridgeport Park in Chicago, Illinois in a style similar to JRR Tolkein's fantasy maps, with beige background colors and black inky linework and typography.
 description: |
-  A choropleth map of the United States with individual counties colored by the percent of adults who get less than 7 hours of sleep.
+  An exploration using "My Precious" from ERSI Styles
 tags:
-  - Choropleth
-  - UW-Mad
-  - Geog370
   - ArcGIS-Pro
-  - Illustrator
+  - ESRI-Styles
 ---
 
 For fun
